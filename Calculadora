@@ -1,0 +1,100 @@
+import java.util.Scanner;
+public class ex_3 {
+    
+    public static Scanner sc = new Scanner(System.in);
+    
+    public static void print(String text) {
+        System.out.println(text);
+    }
+
+    public static String scan(String text) {
+        print(text);
+        return sc.next();
+    }
+    
+    public static float scanFloat(String text) {
+        print(text);
+        return sc.nextFloat();
+    }
+
+    public static int scanInt(String text) {
+        print(text);
+        return sc.nextInt();
+    }
+    public static int ask() {
+        int nDeValores = scanInt("Qual a quantidade de valores que você quer rodar o programa: ");
+        return nDeValores;
+    }
+    public static void main(String[] args) {
+        print("Opções:");
+        print("1 - soma");
+        print("2 - multiplicação");
+        print("3 - divisão");
+        print("4 - subtração");
+        print("5 - potenciação");
+        print("6 - porcentagem");
+        print("7 - raiz quadrada");
+        
+        double soma = 0, multiplicação = 0, divisão = 0, subtração = 0, potenciação = 0, porcentagem = 0, raiz_quadrada = 0;
+        
+        int nDeValores;
+        do {
+            nDeValores = ask();
+            if(nDeValores>5) print("Informe uma quantidade de numero menor que 6");
+            if(nDeValores<1) print("Informe uma quantidade de numero maior que 0");            
+        }while(nDeValores>5 || nDeValores<1);
+        int opt = scanInt("Opção escolhida: ");
+        for(int x = 1; x<=nDeValores; x++) {
+            double n = scanFloat("Numero("+x+"): ");
+            soma += n;
+            
+            if(subtração == 0) subtração = n; 
+            else subtração = subtração -= n;
+            
+            if(potenciação == 0) potenciação = n; 
+            else potenciação = Math.pow(potenciação, n);
+
+            if(multiplicação == 0) multiplicação = n;
+            else multiplicação *= n;
+            
+            if(divisão == 0) divisão = n; 
+            else divisão = divisão/n;         
+
+            if(porcentagem == 0) porcentagem = n; 
+            else porcentagem = n*100/porcentagem;         
+            
+            raiz_quadrada += Math.sqrt(n);
+        }
+
+        switch(opt) {
+            case 1:
+                print("Soma: "+soma);
+                break;
+            case 2:
+                print("Multiplicação: "+multiplicação);
+                break;
+            case 3:
+                print("Divisão: "+divisão);
+                break;
+            case 4:
+                print("Subtração: "+subtração);
+                break;
+            case 5:
+                print("Potenciação: "+potenciação);
+                break;
+            case 6:
+                print("Porcentagem: "+porcentagem);
+                break;
+            case 7:
+                print("Raiz Quadrada: "+raiz_quadrada);
+                break;
+            default:
+                print("Opção errada!");
+                break;
+        }
+        
+        
+        sc.close();
+    }
+
+}
