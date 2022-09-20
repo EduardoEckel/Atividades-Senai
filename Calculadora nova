@@ -1,0 +1,108 @@
+package Programa;
+
+public class calculadora {
+	public double resultado = 0;
+	
+	public void soma(double valor) {
+		this.resultado = this.resultado + valor;
+	}
+	public void multiplicacao(double valor) {
+		this.resultado = this.resultado * valor;
+	}
+	public void divisao(double valor) {
+		this.resultado = this.resultado / valor;
+	}
+	public void subtracao(double valor) {
+		this.resultado = this.resultado - valor;
+	}
+	public void potenciacao(double valor) {
+		this.resultado = Math.pow(this.resultado, valor);
+	}
+	public void porcentagem(double valor) {
+		this.resultado = this.resultado / 100;
+		System.out.println(this.resultado+"%");
+	}
+	public void raizQuadrada() {
+		this.resultado =  Math.sqrt(resultado);
+	}
+}
+
+
+MAIN
+
+package Programa;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);		
+		System.out.println("1- Soma");
+		System.out.println("2- Multiplicação");
+		System.out.println("3- Divisão");
+		System.out.println("4- Subtração");
+		System.out.println("5- Potenciação");
+		System.out.println("6- Porcetagem");
+		System.out.println("7- Raiz Quadrada");
+		System.out.println("8- SAIR");
+		
+		int operacao = sc.nextInt();
+		
+		calculadora calculadora = new calculadora(); 
+				
+		while (operacao != 8) {
+			System.out.println("1- Soma");
+			System.out.println("2- Multiplicação");
+			System.out.println("3- Divisão");
+			System.out.println("4- Subtração");
+			System.out.println("5- Potenciação");
+			System.out.println("6- Porcentagem");
+			System.out.println("7- Raiz Quadrada");
+			System.out.println("8- SAIR");
+			
+
+			System.out.println("Selecione a operaçao: ");
+			operacao = sc.nextInt();
+			
+			System.out.println("Qual o valor: ");
+			double valor = sc.nextDouble();
+						
+			switch(operacao) {
+			case 1:
+				calculadora.soma(valor);
+				break;
+			
+			case 2:
+				calculadora.multiplicacao(valor);
+				break;
+			case 3:
+				calculadora.divisao(valor);
+				break;
+			case 4:
+				calculadora.subtracao(valor);
+				break;
+			case 5:
+				calculadora.potenciacao(valor);
+				break;
+			case 6:
+				calculadora.porcentagem(valor);
+				break;
+			case 7:
+				calculadora.raizQuadrada();
+				break;		
+			default:
+				System.out.println("Opcao invalida!");
+				break;
+					
+			}
+			
+			System.out.println("Valor Atual: " + calculadora.resultado);
+			
+		}
+		
+		
+		
+	}
+
+}
