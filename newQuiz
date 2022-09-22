@@ -1,0 +1,262 @@
+Main
+package Programa;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);		
+		int questao = 0;
+		quiz quiz = new quiz();
+		
+		while(questao != 11) {
+			System.out.println("Bem vindo ao Quiz!!!");
+			System.out.println("Selecione a Questao desejada!");
+			System.out.println("1- Questao 1");
+			System.out.println("2- Questao 2");
+			System.out.println("3- Questao 3");
+			System.out.println("4- Questao 4");
+			System.out.println("5- Questao 5");
+			System.out.println("6- Questao 6");
+			System.out.println("7- Questao 7");
+			System.out.println("8- Questao 8");
+			System.out.println("9- Questao 9");
+			System.out.println("10- Questao 10");
+			System.out.println("11- SAIR");
+
+
+			System.out.println("Selecione a questao: ");
+			questao = sc.nextInt();
+						
+			switch(questao) {
+			case 1:
+				quiz.q1();
+				
+				break;
+			
+			case 2:
+				quiz.q2();
+				break;
+			case 3:
+				quiz.q3();
+				break;
+			case 4:
+				quiz.q4();
+				break;
+			case 5:
+				quiz.q5();
+				break;
+			case 6:
+				quiz.q6();
+				break;
+			case 7:
+				quiz.q7();
+				break;
+			case 8:
+				quiz.q8();
+				break;
+			case 9:
+				quiz.q9();
+				break;
+			case 10:
+				quiz.q10();
+				break;
+				
+			
+			
+			default:
+				System.out.println("Opcao invalida!");
+				break;
+					
+			}
+			
+			
+		}
+		
+		System.out.println("Voce acertou" +quiz.certas+ "questoes");
+	}
+}
+
+
+quiz
+
+package Programa;
+
+import java.util.Scanner;
+
+public class quiz {
+	public static int certas = 0;
+	
+	public static void q1() {
+		System.out.println("1- Quaol foi a season que o objetivo era salvar o jogo dos bugs, mas nao deu certo?");
+		System.out.println("Respostas:");
+		System.out.println("1- CHIMERA");
+		System.out.println("2- NEW DAWN");
+		System.out.println("3- HEALTH");
+		Scanner sc = new Scanner(System.in);
+		int resp = sc.nextInt();
+		if(resp == 3) {
+			certas++;
+			System.out.println("Resposta Correta!");
+		}else {
+			System.out.println("Resposta Errada!");
+		}
+	}
+	
+	public static void q2() {
+		System.out.println("2- Quantas temporadas tem no R6?");
+		System.out.println("Respostas:");
+		System.out.println("1- 25");
+		System.out.println("2- 26");
+		System.out.println("3- 24");
+		Scanner sc = new Scanner(System.in);
+		int resp = sc.nextInt();
+		if(resp == 2) {
+			certas++;
+			System.out.println("Resposta Correta!");
+		}else {
+			System.out.println("Resposta Errada!");
+		}
+	}
+		
+		public static void q3() {
+			System.out.println("3- Qual o nome da season que lancou a Clash no R6");
+			System.out.println("Respostas:");
+			System.out.println("1- DUST LINE");
+			System.out.println("2- GRIM SKY");
+			System.out.println("3- WHITE NOISE");
+			Scanner sc = new Scanner(System.in);
+			int resp = sc.nextInt();
+			if(resp == 2) {
+				certas++;
+				System.out.println("Resposta Correta!");
+			}else {
+				System.out.println("Resposta Errada!");
+			
+		}
+		}
+		
+			public static void q4() {
+				System.out.println("4- O R6 tem quantos operadores no total");
+				System.out.println("Respostas:");
+				System.out.println("1- 60");
+				System.out.println("2- 56");
+				System.out.println("3- 64");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 3) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+			}
+			public static void q5() {
+				System.out.println("5- Sao quantos ranks no total?");
+				System.out.println("Respostas:");
+				System.out.println("1- 20");
+				System.out.println("2- 25");
+				System.out.println("3- 23");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 2) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+				
+			}
+			public static void q6() {
+				System.out.println("6- Sao quantas missoes para completar o modo CENARIOS 100%?");
+				System.out.println("Respostas:");
+				System.out.println("1- 11");
+				System.out.println("2- 6");
+				System.out.println("3- 10");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 2) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+				
+			}
+			public static void q7() {
+				System.out.println("7- O R6 ja esta em qual ano?");
+				System.out.println("Respostas:");
+				System.out.println("1-8");
+				System.out.println("2- 6");
+				System.out.println("3- 7");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 2) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+				
+			}
+			public static void q8() {
+				System.out.println("Qual desses personagens nasceu na Belgica?");
+				System.out.println("Respostas:");
+				System.out.println("1- SENS");
+				System.out.println("2- AZAMI");
+				System.out.println("3- ARUNI");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 1) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+
+			}
+			public static void q9() {
+				System.out.println("9- Qual foi a season que lancou o Jackal e a Mira no R6?");
+				System.out.println("Respostas:");
+				System.out.println("1- BLOOD ORCHID");
+				System.out.println("2- SHADOW LEGACY");
+				System.out.println("3- VELVET SHELL");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 3) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+				
+			}
+			public static void q10() {
+				System.out.println("Quantos operadores negros tem no R6?");
+				System.out.println("Respostas:");
+				System.out.println("1- 5");
+				System.out.println("2- 6");
+				System.out.println("3- 3");
+				Scanner sc = new Scanner(System.in);
+				int resp = sc.nextInt();
+				if(resp == 1) {
+					certas++;
+					System.out.println("Resposta Correta!");
+				}else {
+					System.out.println("Resposta Errada!");
+				
+			}
+				
+				
+			}
+	}
+	
+	
+
